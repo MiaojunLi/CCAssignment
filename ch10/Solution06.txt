@@ -1,0 +1,2 @@
+// We can divide the file into chunks, which are of the size of x megabytes each,where x is the amount of memory available 
+// Each chunks is sorted seperately and once all chunks are done, we can merge the chunks one by one.
