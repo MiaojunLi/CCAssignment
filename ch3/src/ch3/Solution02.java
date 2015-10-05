@@ -6,11 +6,13 @@ package ch3;
 
 import java.util.Stack;
 
-class StackWithMin extends Stack<Integer>(){
-	Stack<Integer> stack2;
-	public StackWithMin(){
+class StackMin extends Stack<Integer>{
+	private Stack<Integer> stack2;  //used to store the minimum elements
+	
+	public StackMin(){
 		stack2=new Stack<Integer>();
 	}
+	
 	public void push(int val){
 		if(val<=min()){
 			stack2.push(val);
@@ -25,7 +27,7 @@ class StackWithMin extends Stack<Integer>(){
 		}
 		return val;
 	}
-	public Integer min(){
+	public int min(){
 		if(stack2.isEmpty())
 			return Integer.MAX_VALUE;
 		else return stack2.peek();

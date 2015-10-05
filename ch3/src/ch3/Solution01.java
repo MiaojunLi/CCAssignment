@@ -10,6 +10,7 @@ class FixedMulStacks{
 	private int stackSize;
 	private int[] val;
 	private int[] size;
+	
 	public FixedMulStacks(int stackSize){
 		this.stackSize=stackSize;
 		val=new int[stackSize*numberofStack];

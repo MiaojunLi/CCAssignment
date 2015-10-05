@@ -18,6 +18,7 @@ public class Solution05 {
 
 	}
 
+	//O(n*n) time and O(n) space 	
 	public Stack<Integer> sort(Stack<Integer> s1){
 		Stack<Integer> s2=new Stack<Integer>();
 		while(!s1.isEmpty()){

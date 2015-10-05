@@ -3,9 +3,11 @@ package ch3;
 import java.util.LinkedList;
 
 public class Solution06 {
+	
 	abstract class Animal{
 		private int order;
 		private String name;
+		
 		public Animal(String s){
 			this.name=s;
 		}
@@ -48,27 +50,43 @@ public class Solution06 {
 			}
 		}
 		
-		public Animal dequeue(){
+		public Animal animalSelection(String name){
+			if(name.equals("cat"))
+				return catsDequeue();
+			if(name.equals("dog"))
+				return dogsDequeue();
+			else return randomDequeue();
+		}
+		
+		public Animal catsDequeue(){
+			if(cats.size()!=0)
+				return cats.poll();
+			return null;
+		}
+		
+		public Animal dogsDequeue(){
 			if(dogs.size()==0){
-				return dequeueCats();
+				return dogs.poll();
+			}
+			return null;
+		}
+		
+		public Animal randomDequeue(){
+			if(dogs.size()==0){
+				return catsDequeue();
 			}
 			else if(cats.size()==0){
-				return dequeueDogs();
+				return dogsDequeue();
 			}
 			Dogs dog=dogs.peek();
 			Cats cat=cats.peek();
 			if(dog.isOlderThan(cat))
-				return dequeueCats();
+				return catsDequeue();
 			else
-				return dequeueDogs();
+				return dogsDequeue();
 		}
+
 		
-		public Animal dequeueCats(){
-			return cats.poll();
-		}
-		public Animal dequeueDogs(){
-			return dogs.poll();
-		}
 	}
 	
 	
