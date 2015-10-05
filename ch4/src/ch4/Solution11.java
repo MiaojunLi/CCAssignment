@@ -11,7 +11,7 @@ public class Solution11 {
 		
 		public TreeNode(int d){
 			data=d;
-			size=1;
+			size++;
 		}
 		
 		public TreeNode getRandomNode(){
@@ -33,6 +33,23 @@ public class Solution11 {
 		
 		public int data(){
 			return data;
+		}
+		
+		public void insert(int d){
+			if(d<=data){
+				if(left==null){
+					left= new TreeNode(d);
+				}else{
+					left.insert(d);
+				}
+			}else{
+				if(right==null){
+					right=new TreeNode(d);
+				}else{
+					right.insert(d);
+				}
+			}
+			size++;
 		}
 		
 		public TreeNode find(int d){

@@ -1,29 +1,36 @@
 package ch4;
 
 public class Solution06 {
-	TreeNode inorderSuccessor(TreeNode n){
-		if(n==null) return null;
+	class TreeNode{
+		int data;
+		TreeNode left;
+		TreeNode right;
+		TreeNode parent;
+	}
+	
+	TreeNode inorderSuccessor(TreeNode root){
+		if(root==null) return null;
 		
-		if(n.right!=null){
-			return leftMostChild(n.right);
+		if(root.right!=null){
+			return leftMostChild(root.right);
 		}else{
-			TreeNode q=n;
-			TreeNode x=q.parent;
-			while(x!=null && x.left!=q){
-				q=x;
-				x=x.parent;
+			TreeNode cur=root;
+			TreeNode parent=cur.parent;
+			while(parent!=null && parent.left!=cur){
+				cur=parent;
+				parent=parent.parent;
 			}
-			return x;
+			return parent;
 		}
 	}
 	
-	TreeNode leftMostChild(TreeNode n){
-		if(n==null){
+	TreeNode leftMostChild(TreeNode root){
+		if(root==null){
 			return null;
 		}
-		while(n.left!=null){
-			n=n.left;
+		while(root.left!=null){
+			root=root.left;
 		}
-		return n;
+		return root;
 	}
 }

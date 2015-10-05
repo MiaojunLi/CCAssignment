@@ -16,9 +16,19 @@ public class Solution01 {
 		public int data;
 		public State state;
 		public Node[] children;
+		
+		public Node[] getAdjacent(){
+			return children;
+		}
 	}
 	class Graph{
-		public Node root;
+		public Node[] nodes;
+		
+		public Node[] getNodes(){
+			return nodes;
+		}
+		
+		
 	}
 	
 	boolean searchRoute(Graph g, Node start,Node end){

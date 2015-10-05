@@ -8,7 +8,17 @@ public class Solution02 {
 	 * Then,insert the left subarray lelments and insert the right subarray elements
 	 * Then,recurse
 	 */
-	TreeNode creatMinialBST(int a[]){
+	class TreeNode{
+		int val;
+		TreeNode left;
+		TreeNode right;
+		public TreeNode(int val){
+			this.val=val;
+		}
+		
+	}
+	
+	TreeNode buildMinialBST(int a[]){
 		if(a.length==0) return null;
 		TreeNode n=buildBST(a,0,a.length-1);
 		return n;
@@ -16,7 +26,7 @@ public class Solution02 {
 	
 	TreeNode buildBST(int[]a,int start,int end){
 		if(start>end) return null;
-		int mid=start+(end-start)/2;
+		int mid=(start+end)/2;
 		TreeNode n=new TreeNode(a[mid]);
 		n.left=buildBST(a,start,mid-1);
 		n.right=buildBST(a,mid+1,end);

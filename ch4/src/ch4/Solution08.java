@@ -1,6 +1,16 @@
 package ch4;
 
+import ch4.Solution06.TreeNode;
+
 public class Solution08 {
+	
+	class TreeNode{
+		int data;
+		TreeNode left;
+		TreeNode right;
+		TreeNode parent;
+	}
+	
 	/*
 	 * Solution1: Based on the assumption "with links to the parent"
 	 * It is a very simple method,which is just to check whether p's 
@@ -26,7 +36,7 @@ public class Solution08 {
 		return false;
 	}
 	/*
-	 * Solution: Based on "without links to parents".
+	 * Solution2: Based on "without links to parents".
 	 * This solution recursivly check whether q and p are on the same side,
 	 * when arriving the point where they are not on the same side, it's their ancestor
 	 */
@@ -54,4 +64,16 @@ public class Solution08 {
 		TreeNode child=pisOnleft? root.left:root.right;
 		return acnestorSolver(child,p,q);
 	}
+	/*
+	 * Solution3: A cleaner and more efficient recursive method, a "bubble-up" solution
+	 */
+	public TreeNode CommonAncestor3(TreeNode root, TreeNode p, TreeNode q) {
+        if(root == null || root == p || root == q) return root;
+        TreeNode left = CommonAncestor3(root.left, p, q);	//find ancestor on the left side 
+        TreeNode right = CommonAncestor3(root.right, p, q);	//find ancestro on the right side
+        if(left!=null&&right!=null) return root;  //if ancestro appear on both same, the root must be the common ancestro
+        return left == null ? right : left;		//else, return which side the ancestor on.
+    }
+	
+	
 }

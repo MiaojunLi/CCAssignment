@@ -7,6 +7,15 @@ import javax.swing.tree.TreeNode;
 import javax.xml.soap.Node;
 
 public class Solution03 {
+	class TreeNode{
+		int val;
+		TreeNode left;
+		TreeNode right;
+		public TreeNode(int val){
+			this.val=val;
+		}
+		
+	}
 	/*
 	 * This solution uses a modification of pre-order  traversal algorithm adn pass the 
 	 * next level to the next recursive call
