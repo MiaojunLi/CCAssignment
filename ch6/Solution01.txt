@@ -1,0 +1,8 @@
+The solution is as follows:
+Take one pill from bottle1, two pills from bottle 2,three pills from bottle 3,and so on.
+Then weight the sum of these pills, if all pills were one gram, the weight will be (1+2+3+…+20=210). 
+While the below equation will tell you the bottle number that has pills of weight 1.1 grams:
+
+	(Weight-210grams)/(0.1grams) 
+
+For example, if the weight is 211.1, then the bottle 13 has the heavy pills. 

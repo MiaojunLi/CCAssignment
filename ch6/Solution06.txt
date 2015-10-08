@@ -1,0 +1,8 @@
+we can figure out the solution step by step:
+1. only one person has blue eyes:
+Assuming all people are intelligent, the blue-eyed person should look around and realize hat no one else has blue eyes.Since he knows at least one person has blue eyes, he must conclude that it is he who has blue eyes, and he will leave that night.
+2.two people have blue eyes.
+The two blue-eyed people see each other, but are not sure whether c is 1 or 2. therefore both of them will only know it is two only on the second day when they see the other blue-eyed is still here, so they will leave together on the second night.
+3.As we increase c, we can see that this logic continues to apply.
+
+So the conclusion is: if c people have blue eyes, it will take c nights for the blue-eyed people to know that and leave. And they will leave on the same night.

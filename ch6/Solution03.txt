@@ -1,0 +1,2 @@
+There is no solution to this problem.
+The reason is that each domino we set on the board will take up one white and one black square. Therefore,31 domino will take up 31 white and 31 black squares.While on this board, we only have 30 black squares and 32 white squares, which indicates it is impossible. 

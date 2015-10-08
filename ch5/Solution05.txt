@@ -1,0 +1,2 @@
+Because if n is equal to the power of 2, then n will like 100.. and n-1 will be 011..
+and n&(n-1) will be equal to 0. So n&(n-1)==0 can be used to checks if n is the power of 2;

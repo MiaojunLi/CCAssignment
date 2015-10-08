@@ -1,0 +1,4 @@
+The steps to get 4 quarts of water with only a five-quart jug and a three-quart jug:
+1.fill the 5-quart jug, and pour 3 quarts into the 3-quart jug, the 2 quarts is remained.
+2.empty the 3-quart jug and fill it with the 2 quarts water stored in the 5-quart jug.
+3.fill the 5-quart jug again till it’s full, then pour part of the water into the 3-quart jug till is full, then there will be four quarts in the 5-quart jug(because the 3-quart jug only needs one quart to fill) 

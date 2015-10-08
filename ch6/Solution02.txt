@@ -1,0 +1,10 @@
+For Game 1, the winning probability is p1=p;
+
+For Game 2, the winning probability is p2(winning)=t(3,2)+t(3,3), where t(3,2) means two out of three shots are successful and t(3,3) means all the three shots are successful.
+t(3,2)=3(1-p)*p*p and t(3,3)=p*p*p; so p2=3(1-p)*p*p+p*p*p;
+
+We should play Game 1,if p1>p2, it means p>3(1-p)*p*p+p*p*p;, we have p<0.5;
+
+We should play Game 2,if p1<p2, it means p<3(1-p)*p*p+p*p*p;, we have 0.5<p<1;
+
+if p=0 or 0.5 or 1, it doesn’t matter which game we play. 

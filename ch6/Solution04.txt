@@ -1,0 +1,4 @@
+This is an easy problem if we think in such a way that the none of the ants will collide with other if and only if all of them chose the same direction, and this probability is 
+p(same direction)=p(same left)+p(same right)=2*(1/2)*(1/2)*(1/2)= power(2,n-1) (n is the number of ants on vertex polygon)
+
+So the probability of collision (between two or three of them) is P=1-p(same direction)=1-power(2,n-1);

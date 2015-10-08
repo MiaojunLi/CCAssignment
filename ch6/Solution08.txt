@@ -1,0 +1,5 @@
+1.As the first try, if we drop an egg from the 10th floor, then 20th floor..
+The worst case is it’s 100th floor that will break an egg, then it will take 9 times to go to 90th floor and 9 times to go to 99th floor, so totally it will be 18 times.
+2.If we start at 15, then 30… we will decrease the drop of egg1 but we will increase the drop of egg2 in case of the worst case.That means we should make a balance between egg1 and egg2.
+3.The best solution is that we can go floor 14, then 27, then 39,… This will takes 14 steps in the worst case. 
+Or we can go to floor 50 first , then increase 10 or decrease 10 each time based on 50 is smaller or bigger, and then increase 1 each time when we find the right range of 10.It is also 14 times in the worst case.   
